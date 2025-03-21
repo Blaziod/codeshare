@@ -1,5 +1,4 @@
 import React from "react";
-import Logo from "/src/assets/png/logo.png";
 
 const Home = () => {
   return (
@@ -12,12 +11,12 @@ const Home = () => {
           padding: "10px",
         }}
       >
-        <img src={Logo} width={50} height={50} alt="logo" />
+        <img src="/assets/png/logo.png" width={50} height={50} alt="logo" />
         <p style={{ marginLeft: "10px", color: "#093" }}>Track Request</p>
       </div>
       <div style={{ position: "relative", width: "100%", height: "auto" }}>
         <img
-          src="/src/assets/png/a.png"
+          src="/assets/png/a.png"
           alt="hero"
           style={{
             width: "100%",
@@ -26,7 +25,7 @@ const Home = () => {
           }}
         />
         <img
-          src="/src/assets/png/aa.png"
+          src="/assets/png/aa.png"
           alt="hero"
           style={{
             position: "absolute",
