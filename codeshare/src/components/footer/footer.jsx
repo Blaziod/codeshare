@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
 
 // Reusable component for the styled text
@@ -83,7 +84,7 @@ const FooterSection = ({ title, links, toggleDropdown }) => (
 );
 
 const Footer = () => {
-  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 768);
+  const [setIsSmallScreen] = useState(window.innerWidth <= 768);
   const [openDropdowns, setOpenDropdowns] = useState({}); // Track the open state of dropdowns
 
   useEffect(() => {
@@ -123,14 +124,13 @@ const Footer = () => {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: isSmallScreen ? "2fr 1fr" : " 2fr 1fr",
-          justifyItems: isSmallScreen ? "center" : "center",
-          alignItems: isSmallScreen ? "flex-start" : "flex-start",
-          gap: isSmallScreen ? "10px" : "30px",
+          gridTemplateColumns: "2fr 1fr", // Keep 2fr 1fr for all screen sizes
+          justifyItems: "center", // Centering the content horizontally
+          alignItems: "flex-start", // Align items to the start vertically
+          gap: "30px", // Gap between sections
           height: "auto",
           width: "100%",
-          justifyContent: isSmallScreen ? "center" : "center",
-          padding: isSmallScreen ? "10px" : "20px",
+          padding: "20px",
         }}
       >
         {sections.map((section, index) => (
@@ -138,7 +138,6 @@ const Footer = () => {
             key={index}
             title={section.title}
             links={section.links}
-            isSmallScreen={isSmallScreen}
             toggleDropdown={() => toggleDropdown(index)}
             isDropdownOpen={openDropdowns[index]}
           />
