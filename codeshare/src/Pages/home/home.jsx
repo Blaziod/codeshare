@@ -220,7 +220,6 @@ const Home = () => {
           style={{
             position: "absolute",
             top: 0,
-            left: 0,
             width: "100%",
             borderRadius: "30px",
             height: "100%",
@@ -318,8 +317,8 @@ const Home = () => {
           <span style={{ fontWeight: "bolder", color: "#fff" }}>
             Codeshare.ng
           </span>
-          , you can get involved as an Event Host, Celebrant, DJ, MC, Artist, or
-          Performer. Whether you're hosting the event, celebrating a special
+          , you can get involved as an Event's Host, Celebrant, DJ, MC, Artist,
+          or Performer. Whether you're hosting the event, celebrating a special
           moment, playing music, keeping the energy alive, or showcasing your
           talents,{" "}
           <span style={{ fontWeight: "bolder", color: "#fff" }}>
