@@ -203,7 +203,7 @@ const Home = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          minHeight: "200px",
+          minHeight: "300px",
         }}
       >
         <img
