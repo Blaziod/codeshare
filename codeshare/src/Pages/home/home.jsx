@@ -100,7 +100,7 @@ const Home = () => {
           </defs>
         </svg>
       ),
-      title: "Accept Song Request",
+      title: "Accept Song Request as a DJ",
       description:
         "Let your audience choose the music and keep the vibe alive.",
     },
@@ -193,7 +193,7 @@ const Home = () => {
       ),
       title: "Accept Tips or Gifts",
       description:
-        "Receive tokens of appreciation directly from your audience.",
+        "As a celebrant, host, performer or dj you can get gifts from your guests or audience by them scanning your code",
     },
   ];
 
