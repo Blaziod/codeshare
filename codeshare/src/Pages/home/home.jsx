@@ -203,7 +203,7 @@ const Home = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          minHeight: "300px",
+          minHeight: "350px",
         }}
       >
         <img
@@ -314,7 +314,13 @@ const Home = () => {
           }}
         >
           You can register or sign up as an Event Host, Celebrant, DJ, MC,
-          Artist, or Performer
+          Artist, or Performer. Whether you're organizing, celebrating, spinning
+          tunes, keeping the crowd entertained, or showcasing your talents,{" "}
+          <span style={{ fontWeight: "bolder", color: "#fff" }}>
+            Codeshare.ng
+          </span>{" "}
+          helps you connect with your audience in real time for an unforgettable
+          experience.
         </h1>
       </div>
       <div>
@@ -466,7 +472,7 @@ const Home = () => {
               </svg>
             }
             title="Accept"
-            description="Performers fulfil requests live"
+            description="Performers fulfill requests live"
           />
           <FeatureCards
             icon={
