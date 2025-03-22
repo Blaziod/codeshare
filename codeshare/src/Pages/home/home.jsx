@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "components/footer/footer";
 
 const Home = () => {
   const FeatureCard = ({ icon, title, description }) => {
@@ -42,6 +43,7 @@ const Home = () => {
           alignItems: "center",
           justifyContent: "center",
           textAlign: "center",
+          gap: "5px",
         }}
       >
         <div>{icon}</div>
@@ -98,8 +100,9 @@ const Home = () => {
           </defs>
         </svg>
       ),
-      title: "Instant Song Request",
-      description: "Get your favourite song played instantly at any event",
+      title: "Accept Song Request",
+      description:
+        "Let your audience choose the music and keep the vibe alive.",
     },
     {
       icon: (
@@ -137,9 +140,31 @@ const Home = () => {
           </defs>
         </svg>
       ),
-      title: "Shoutouts and Mentions",
-      description:
-        "Make special moments unforgettable with personalized shoutouts",
+      title: "Accept Special Requests and Messages",
+      description: "Accept Special Requests and Messages",
+    },
+    {
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+        >
+          <path
+            opacity="0.4"
+            d="M19.25 7.41021V16.5902C19.25 18.3102 18.63 19.6002 17.52 20.2202C17.07 20.4702 16.57 20.5902 16.05 20.5902C15.25 20.5902 14.39 20.3202 13.51 19.7702L10.59 17.9402C10.39 17.8202 10.16 17.7502 9.93 17.7502H9V6.25021H9.93C10.16 6.25021 10.39 6.18021 10.59 6.06021L13.51 4.23021C14.97 3.32021 16.4 3.16021 17.52 3.78021C18.63 4.40021 19.25 5.69021 19.25 7.41021Z"
+            fill="#009933"
+          />
+          <path
+            d="M9 6.25V17.75H8.5C6.08 17.75 4.75 16.42 4.75 14V10C4.75 7.58 6.08 6.25 8.5 6.25H9Z"
+            fill="#009933"
+          />
+        </svg>
+      ),
+      title: "Accept Shoutout Request",
+      description: "Give special mentions and make moments unforgettable.",
     },
     {
       icon: (
@@ -150,35 +175,24 @@ const Home = () => {
           viewBox="0 0 23 24"
           fill="none"
         >
-          {/* SVG Path for Secured Payments */}
-          <g clipPath="url(#clip0_1310_476)">
-            <mask
-              id="mask0_1310_476"
-              style={{ maskType: "luminance" }}
-              maskUnits="userSpaceOnUse"
-              x="0"
-              y="0"
-              width="23"
-              height="24"
-            >
-              <path d="M22.5938 0H0V24H22.5938V0Z" fill="white" />
-            </mask>
-            <g mask="url(#mask0_1310_476)">
-              <path
-                d="M11.2969 0.515598C11.5157 0.515598 11.7188 0.562468 11.9062 0.6562L20.7656 4.4062C21.2969 4.625 21.7188 4.96877 22.0312 5.4375C22.375 5.90623 22.5469 6.4531 22.5469 7.0781C22.5781 8.6719 22.3125 10.5469 21.75 12.7031C21.1875 14.8594 20.1719 16.9531 18.7031 18.9844C17.2657 21.0469 15.2032 22.75 12.5156 24.0938C11.7032 24.4688 10.8907 24.4688 10.0781 24.0938C7.39065 22.75 5.32815 21.0469 3.89065 18.9844C2.4219 16.9531 1.40627 14.8594 0.843776 12.7031C0.281276 10.5469 0.0156507 8.6719 0.0469007 7.0781C0.0469007 6.4531 0.218776 5.90623 0.562526 5.4375C0.875026 4.96877 1.2969 4.625 1.82815 4.4062L10.6875 0.6562C10.875 0.562468 11.0781 0.515598 11.2969 0.515598ZM11.2969 3.6562V21.375C13.4219 20.2813 15.0938 18.8906 16.3125 17.2031C17.5 15.5156 18.3437 13.7813 18.8437 12C19.3125 10.1875 19.5469 8.56247 19.5469 7.125L11.2969 3.6562Z"
-                fill="#009933"
-              />
-            </g>
-          </g>
-          <defs>
-            <clipPath id="clip0_1310_476">
-              <rect width="22.5938" height="24" fill="white" />
-            </clipPath>
-          </defs>
+          <path
+            d="M17.5 12.6499V16.3499C17.5 19.4699 14.59 21.9999 11 21.9999C7.41 21.9999 4.5 19.4699 4.5 16.3499V12.6499C4.5 15.7699 7.41 17.9999 11 17.9999C14.59 17.9999 17.5 15.7699 17.5 12.6499Z"
+            fill="#009933"
+          />
+          <path
+            opacity="0.4"
+            d="M17.5 7.6499V12.6499C17.5 15.7699 14.59 17.9999 11 17.9999C7.41 17.9999 4.5 15.7699 4.5 12.6499V7.6499C4.5 8.5599 4.75 9.3999 5.19 10.1199C6.26 11.8799 8.46 12.9999 11 12.9999C13.54 12.9999 15.74 11.8799 16.81 10.1199C17.25 9.3999 17.5 8.5599 17.5 7.6499Z"
+            fill="#009933"
+          />
+          <path
+            d="M17.5 7.65C17.5 8.56 17.25 9.4 16.81 10.12C15.74 11.88 13.54 13 11 13C8.46 13 6.26 11.88 5.19 10.12C4.75 9.4 4.5 8.56 4.5 7.65C4.5 4.53 7.41 2 11 2C12.8 2 14.42 2.63 15.6 3.65C16.77 4.68 17.5 6.09 17.5 7.65Z"
+            fill="#009933"
+          />
         </svg>
       ),
-      title: "Secured Payments",
-      description: "Hassle-free transactions for every request",
+      title: "Accept Tips and Gifts",
+      description:
+        "Receive tokens of appreciation directly from your audience.",
     },
   ];
 
@@ -250,8 +264,8 @@ const Home = () => {
               }}
             >
               Connecting with your Audience or Guests at an Event in Real-Time
-              for Special Requests, Donations, Tips, or Gifts to Make Your
-              Events Unforgettable.
+              for Special Requests, Donations, Tips, or Gifts through a unique
+              QRcode to Make Your Events Unforgettable.
             </h1>
             <div
               style={{
@@ -619,6 +633,7 @@ const Home = () => {
           </button>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
