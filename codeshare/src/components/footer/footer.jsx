@@ -68,7 +68,7 @@ const FooterSection = ({ title, links, toggleDropdown }) => (
 
 const Footer = () => {
   return (
-    <div>
+    <div style={{ paddingBottom: "40px" }}>
       <div
         style={{
           display: "flex",
