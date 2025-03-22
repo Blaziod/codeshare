@@ -98,6 +98,9 @@ const Footer = () => {
                 width: "15px",
                 height: "15px",
               }}
+              onClick={() =>
+                window.open("https://www.instagram.com/codeshare.ng", "_blank")
+              }
             >
               <FaInstagram size={25} color="#FFF" />
             </div>
