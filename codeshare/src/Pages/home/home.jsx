@@ -331,7 +331,7 @@ const Home = () => {
           At{" "}
           <span style={{ fontWeight: "bolder", color: "#fff" }}>
             Codeshare.ng
-          </span>
+          </span>{" "}
           you can register as an Event's Host, Celebrant, DJ, MC, Artist, or
           Performer. Whether you're hosting the event, celebrating a special
           moment, playing music, keeping the energy alive, or showcasing your
