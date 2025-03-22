@@ -311,16 +311,22 @@ const Home = () => {
             color: "#9CA3AF",
             fontWeight: "normal",
             fontSize: "15px",
+            textAlign: "justify",
           }}
         >
-          You can register or sign up as an Event Host, Celebrant, DJ, MC,
-          Artist, or Performer. Whether you're organizing, celebrating, spinning
-          tunes, keeping the crowd entertained, or showcasing your talents,{" "}
+          At{" "}
+          <span style={{ fontWeight: "bolder", color: "#fff" }}>
+            Codeshare.ng
+          </span>
+          , you can get involved as an Event Host, Celebrant, DJ, MC, Artist, or
+          Performer. Whether you're hosting the event, celebrating a special
+          moment, playing music, keeping the energy alive, or showcasing your
+          talents,{" "}
           <span style={{ fontWeight: "bolder", color: "#fff" }}>
             Codeshare.ng
           </span>{" "}
-          helps you connect with your audience in real time for an unforgettable
-          experience.
+          allows you to engage with your audience in real time for an
+          unforgettable experience.
         </h1>
       </div>
       <div>
