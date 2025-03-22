@@ -414,7 +414,7 @@ const Home = () => {
               </svg>
             }
             title="Sign Up"
-            description="Performers set their request pricing"
+            description="Dj, Celebrant, Host, Performers register their details and terms to get their code"
           />
           <FeatureCards
             icon={
