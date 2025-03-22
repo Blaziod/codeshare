@@ -141,7 +141,8 @@ const Home = () => {
         </svg>
       ),
       title: "Accept Special Requests and Messages",
-      description: "Accept Special Requests and Messages",
+      description:
+        "Deliver heartfelt messages, announcements and personalised interactions.",
     },
     {
       icon: (
@@ -331,8 +332,8 @@ const Home = () => {
           <span style={{ fontWeight: "bolder", color: "#fff" }}>
             Codeshare.ng
           </span>
-          , you can get involved as an Event's Host, Celebrant, DJ, MC, Artist,
-          or Performer. Whether you're hosting the event, celebrating a special
+          , you can register as an Event's Host, Celebrant, DJ, MC, Artist, or
+          Performer. Whether you're hosting the event, celebrating a special
           moment, playing music, keeping the energy alive, or showcasing your
           talents,{" "}
           <span style={{ fontWeight: "bolder", color: "#fff" }}>
@@ -446,7 +447,7 @@ const Home = () => {
                 </defs>
               </svg>
             }
-            title="Scan QR Code"
+            title="Get QR Code"
             description="Get your QRcode and share"
           />
 
@@ -533,7 +534,7 @@ const Home = () => {
                 </defs>
               </svg>
             }
-            title="Track"
+            title="Acknowledgement"
             description="Execute request or acknowledge notifications"
           />
         </div>

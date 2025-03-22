@@ -9,7 +9,7 @@ const FooterText = ({
   children,
   noWrap,
   onClick,
-  isDropdown,
+  icon,
 }) => {
   return (
     <p
@@ -26,30 +26,13 @@ const FooterText = ({
       }}
       onClick={onClick}
     >
+      {icon && <span>{icon}</span>}
       {children}
-      {isDropdown && (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="21"
-          viewBox="0 0 20 21"
-          fill="none"
-        >
-          <path
-            d="M13.7333 11.1241L10.5768 6.91797H5.9039C5.10426 6.91797 4.70445 7.88353 5.27019 8.45027L9.58523 12.7653C9.91799 13.0971 10.3687 13.2834 10.8387 13.2834C11.3086 13.2834 11.7593 13.0971 12.0921 12.7653L13.7333 11.1241Z"
-            fill="#707A8A"
-          />
-          <path
-            d="M15.7655 6.91797H10.5769L13.7335 11.1241L16.4073 8.45027C16.965 7.88353 16.5652 6.91797 15.7655 6.91797Z"
-            fill="#707A8A"
-          />
-        </svg>
-      )}
     </p>
   );
 };
 
-const FooterSection = ({ title, links, toggleDropdown }) => (
+const FooterSection = ({ title, links, toggleDropdown, icons }) => (
   <div>
     <div
       style={{
@@ -79,6 +62,18 @@ const FooterSection = ({ title, links, toggleDropdown }) => (
           {link.text}
         </FooterText>
       ))}
+      {icons &&
+        icons.map((icon, index) => (
+          <FooterText
+            key={index}
+            fontSize="14px"
+            color="#707A8A"
+            fontWeight="400"
+            icon={icon}
+          >
+            {icon}
+          </FooterText>
+        ))}
     </div>
   </div>
 );
@@ -116,6 +111,33 @@ const Footer = () => {
     {
       title: "Legal",
       links: [{ text: "Terms of Use" }, { text: "Privacy Policy" }],
+      icons: [
+        // Adding icons under the "Legal" section
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+        >
+          <circle cx="8" cy="8" r="8" fill="#707A8A" />
+        </svg>,
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+        >
+          <path d="M8 0L16 16H0L8 0Z" fill="#707A8A" />
+        </svg>,
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+        >
+          <rect width="16" height="16" fill="#707A8A" />
+        </svg>,
+      ],
     },
   ];
 
@@ -123,14 +145,14 @@ const Footer = () => {
     <div>
       <div
         style={{
-          display: "grid",
-          gridTemplateColumns: "2fr 1fr", // Keep 2fr 1fr for all screen sizes
+          display: "flex",
           justifyItems: "center", // Centering the content horizontally
           alignItems: "flex-start", // Align items to the start vertically
           gap: "30px", // Gap between sections
           height: "auto",
           width: "100%",
           padding: "20px",
+          justifyContent: "center",
         }}
       >
         {sections.map((section, index) => (
