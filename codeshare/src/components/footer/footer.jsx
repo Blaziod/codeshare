@@ -125,7 +125,7 @@ const Footer = () => {
           display: "grid",
           gridTemplateColumns: isSmallScreen ? "2fr 1fr" : " 2fr 1fr",
           justifyItems: isSmallScreen ? "center" : "center",
-          alignItems: isSmallScreen ? "center" : "flex-start",
+          alignItems: isSmallScreen ? "flex-start" : "flex-start",
           gap: isSmallScreen ? "10px" : "30px",
           height: "auto",
           width: "100%",
