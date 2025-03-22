@@ -198,7 +198,7 @@ const Home = () => {
   ];
 
   return (
-    <div style={{ minHeight: "100vh", minWidth: "100vw" }}>
+    <div style={{ minHeight: "100vh", minWidth: "100vw", maxWidth: "100vw" }}>
       <div
         style={{
           display: "flex",
