@@ -195,9 +195,18 @@ const Home = () => {
         <img src="/assets/png/logo.png" width={50} height={50} alt="logo" />
         <p style={{ marginLeft: "10px", color: "#093" }}>Track Request</p>
       </div>
-      <div style={{ position: "relative", width: "100%", height: "auto" }}>
+      <div
+        style={{
+          position: "relative",
+          width: "100%",
+          height: "auto",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
         <img
-          src="/assets/png/a.png"
+          src="/assets/svg/dc.svg"
           alt="hero"
           style={{
             width: "100%",
@@ -205,18 +214,107 @@ const Home = () => {
             height: "auto",
           }}
         />
-        <img
-          src="/assets/png/aa.png"
-          alt="hero"
+
+        <div
           style={{
             position: "absolute",
             top: 0,
             left: 0,
             width: "100%",
             borderRadius: "30px",
-            height: "auto",
+            height: "100%",
+            backgroundColor: "rgba(17, 24, 39, 0.40)",
+            padding: "20px",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
           }}
-        />
+        >
+          <div style={{ padding: "20px" }}>
+            <h1
+              style={{
+                textAlign: "left",
+                color: "#fff",
+                fontWeight: "bolder",
+                fontSize: "36px",
+              }}
+            >
+              Maximize Your Earnings By
+            </h1>
+            <h1
+              style={{
+                color: "#fff",
+                fontWeight: "normal",
+                fontSize: "15px",
+              }}
+            >
+              Connecting with your Audience or Guests at an Event in Real-Time
+              for Special Requests, Donations, Tips, or Gifts to Make Your
+              Events Unforgettable.
+            </h1>
+            <div
+              style={{
+                display: "flex",
+                gap: "20px",
+                width: "100%",
+                paddingTop: "20px",
+              }}
+            >
+              <button
+                style={{
+                  backgroundColor: "#009933",
+                  color: "#fff",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  borderRadius: "10px",
+                  height: "50px",
+                  width: "45%",
+                }}
+              >
+                Sign Up
+              </button>
+              <button
+                style={{
+                  backgroundColor: "#1F2937",
+                  color: "#fff",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  padding: "15px 30px",
+                  borderRadius: "10px",
+                  height: "50px",
+                  width: "45%",
+                }}
+              >
+                Sign In
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        style={{ paddingTop: "30px", padding: "20px", paddingBottom: "30px" }}
+      >
+        <h1
+          style={{
+            textAlign: "left",
+            color: "#fff",
+            fontWeight: "bolder",
+            fontSize: "24px",
+          }}
+        >
+          Who can use Codeshare.ng?
+        </h1>
+        <h1
+          style={{
+            color: "#9CA3AF",
+            fontWeight: "normal",
+            fontSize: "15px",
+          }}
+        >
+          You can register or sign up as an Event Host, Celebrant, DJ, MC,
+          Artist, or Performer
+        </h1>
       </div>
       <div>
         <h1
@@ -439,33 +537,7 @@ const Home = () => {
           </div>
         ))}
       </div>
-      <div
-        style={{ paddingTop: "50px", padding: "20px", paddingBottom: "50px" }}
-      >
-        <h1
-          style={{
-            textAlign: "left",
-            color: "#fff",
-            fontWeight: "bolder",
-            fontSize: "24px",
-          }}
-        >
-          Who can use Codeshare.ng?
-        </h1>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(2, 1fr)", // 2 columns for smaller screens
-            gap: "20px",
-            padding: "20px",
-          }}
-        >
-          <img src="/assets/svg/c.svg" />
-          <img src="/assets/svg/b.svg" />
-          <img src="/assets/svg/bb.svg" />
-          <img src="/assets/svg/d.svg" />
-        </div>
-      </div>
+
       <div
         style={{
           paddingTop: "50px",
@@ -482,7 +554,7 @@ const Home = () => {
             textAlign: "center",
           }}
         >
-          Sign Up Now & Join The Experience
+          Register & Join The Experience
         </h1>
         <h1
           style={{
@@ -494,6 +566,46 @@ const Home = () => {
         >
           Make your event unforgettable with Codeshare.ng
         </h1>
+        <div
+          style={{
+            display: "flex",
+            gap: "20px",
+            width: "100%",
+            paddingTop: "20px",
+            flexDirection: "column",
+          }}
+        >
+          <button
+            style={{
+              backgroundColor: "#009933",
+              color: "#fff",
+              justifyContent: "center",
+              alignItems: "center",
+              borderRadius: "10px",
+              height: "50px",
+              width: "100%",
+              cursor: "pointer",
+            }}
+          >
+            Get Started
+          </button>
+          <button
+            style={{
+              backgroundColor: "#111827",
+              color: "#093",
+              justifyContent: "center",
+              alignItems: "center",
+              padding: "15px 30px",
+              borderRadius: "10px",
+              height: "50px",
+              width: "100%",
+              border: "2px solid #009933",
+              cursor: "pointer",
+            }}
+          >
+            Sign In
+          </button>
+        </div>
       </div>
     </div>
   );
