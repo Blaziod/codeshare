@@ -1,4 +1,5 @@
 import React from "react";
+import { ReactComponent as SongRequestIcon } from "/assets/svg/dc.svg";
 
 const Home = () => {
   const FeatureCard = ({ icon, title, description }) => {
@@ -203,10 +204,10 @@ const Home = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          minHeight: "100px",
+          minHeight: "200px",
         }}
       >
-        <img
+        {/* <img
           src="/assets/svg/dc.svg"
           alt="hero"
           style={{
@@ -214,6 +215,9 @@ const Home = () => {
             borderRadius: "30px",
             height: "auto",
           }}
+        /> */}
+        <SongRequestIcon
+          style={{ width: "100%", borderRadius: "30px", height: "auto" }}
         />
 
         <div
