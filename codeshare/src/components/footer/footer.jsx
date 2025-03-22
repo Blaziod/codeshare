@@ -1,5 +1,5 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 
 // Reusable component for the styled text
 const FooterText = ({
@@ -32,7 +32,7 @@ const FooterText = ({
   );
 };
 
-const FooterSection = ({ title, links, toggleDropdown, icons }) => (
+const FooterSection = ({ title, links, toggleDropdown }) => (
   <div>
     <div
       style={{
@@ -62,85 +62,11 @@ const FooterSection = ({ title, links, toggleDropdown, icons }) => (
           {link.text}
         </FooterText>
       ))}
-      {icons &&
-        icons.map((icon, index) => (
-          <FooterText
-            key={index}
-            fontSize="14px"
-            color="#707A8A"
-            fontWeight="400"
-            icon={icon}
-          >
-            {icon}
-          </FooterText>
-        ))}
     </div>
   </div>
 );
 
 const Footer = () => {
-  const [setIsSmallScreen] = useState(window.innerWidth <= 768);
-  const [openDropdowns, setOpenDropdowns] = useState({}); // Track the open state of dropdowns
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const toggleDropdown = (sectionIndex) => {
-    setOpenDropdowns((prevState) => ({
-      ...prevState,
-      [sectionIndex]: !prevState[sectionIndex],
-    }));
-  };
-
-  const sections = [
-    {
-      title: "Company",
-      links: [
-        { text: "About Us" },
-        { text: "Help Center" },
-        { text: "FAQs", noWrap: true },
-      ],
-    },
-
-    {
-      title: "Legal",
-      links: [{ text: "Terms of Use" }, { text: "Privacy Policy" }],
-      icons: [
-        // Adding icons under the "Legal" section
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          viewBox="0 0 16 16"
-        >
-          <circle cx="8" cy="8" r="8" fill="#707A8A" />
-        </svg>,
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          viewBox="0 0 16 16"
-        >
-          <path d="M8 0L16 16H0L8 0Z" fill="#707A8A" />
-        </svg>,
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          viewBox="0 0 16 16"
-        >
-          <rect width="16" height="16" fill="#707A8A" />
-        </svg>,
-      ],
-    },
-  ];
-
   return (
     <div>
       <div
@@ -155,15 +81,93 @@ const Footer = () => {
           justifyContent: "center",
         }}
       >
-        {sections.map((section, index) => (
-          <FooterSection
-            key={index}
-            title={section.title}
-            links={section.links}
-            toggleDropdown={() => toggleDropdown(index)}
-            isDropdownOpen={openDropdowns[index]}
-          />
-        ))}
+        <div
+          style={{
+            gap: "10px",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            alignSelf: "flex-start",
+          }}
+        >
+          <h1 style={{ fontSize: "18px", color: "#FFF", fontWeight: "500" }}>
+            Company
+          </h1>
+          <h1 style={{ fontSize: "14px", color: "#707A8A", fontWeight: "400" }}>
+            About Us
+          </h1>
+          <h1 style={{ fontSize: "14px", color: "#707A8A", fontWeight: "400" }}>
+            Help Center
+          </h1>
+          <h1 style={{ fontSize: "14px", color: "#707A8A", fontWeight: "400" }}>
+            FAQs
+          </h1>
+        </div>
+        <div
+          style={{
+            gap: "10px",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            alignSelf: "flex-start",
+          }}
+        >
+          <h1 style={{ fontSize: "18px", color: "#FFF", fontWeight: "500" }}>
+            Legal
+          </h1>
+          <h1 style={{ fontSize: "14px", color: "#707A8A", fontWeight: "400" }}>
+            Terms of Use
+          </h1>
+          <h1 style={{ fontSize: "14px", color: "#707A8A", fontWeight: "400" }}>
+            Privacy Policy
+          </h1>
+          <div style={{ display: "flex", gap: "10px" }}>
+            <div
+              style={{
+                backgroundColor: "#707A8A",
+                borderRadius: "50%",
+                padding: "10px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                width: "15px",
+                height: "15px",
+              }}
+            >
+              <FaFacebookF size={19} color="#FFF" />
+            </div>
+            <div
+              style={{
+                backgroundColor: "#707A8A",
+                borderRadius: "50%",
+                padding: "10px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                width: "15px",
+                height: "15px",
+              }}
+            >
+              <FaTwitter size={25} color="#FFF" />
+            </div>
+            <div
+              style={{
+                backgroundColor: "#707A8A",
+                borderRadius: "50%",
+                padding: "10px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                width: "15px",
+                height: "15px",
+              }}
+            >
+              <FaInstagram size={25} color="#FFF" />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

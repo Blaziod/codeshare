@@ -140,7 +140,7 @@ const Home = () => {
           </defs>
         </svg>
       ),
-      title: "Accept Special Requests and Messages",
+      title: "View Requests or Messages",
       description:
         "Deliver heartfelt messages, announcements and personalised interactions.",
     },
@@ -191,7 +191,7 @@ const Home = () => {
           />
         </svg>
       ),
-      title: "Accept Tips and Gifts",
+      title: "Accept Tips or Gifts",
       description:
         "Receive tokens of appreciation directly from your audience.",
     },
@@ -266,7 +266,7 @@ const Home = () => {
             >
               Connecting with your Audience or Guests at an Event in Real-Time
               for Special Requests, Donations, Tips, or Gifts through a unique
-              QRcode to Make Your Events Unforgettable.
+              QRcode to Make Your Events Monumental.
             </h1>
             <div
               style={{
@@ -332,16 +332,25 @@ const Home = () => {
           <span style={{ fontWeight: "bolder", color: "#fff" }}>
             Codeshare.ng
           </span>
-          , you can register as an Event's Host, Celebrant, DJ, MC, Artist, or
+          you can register as an Event's Host, Celebrant, DJ, MC, Artist, or
           Performer. Whether you're hosting the event, celebrating a special
           moment, playing music, keeping the energy alive, or showcasing your
-          talents,{" "}
+          talents.{" "}
+        </h1>
+        <p
+          style={{
+            color: "#9CA3AF",
+            fontWeight: "normal",
+            fontSize: "15px",
+            textAlign: "justify",
+          }}
+        >
           <span style={{ fontWeight: "bolder", color: "#fff" }}>
             Codeshare.ng
           </span>{" "}
           allows you to engage with your audience in real time for an
-          unforgettable experience.
-        </h1>
+          exceptional experience.
+        </p>
       </div>
       <div>
         <h1
@@ -591,7 +600,7 @@ const Home = () => {
             fontSize: "15px",
           }}
         >
-          Make your event unforgettable with Codeshare.ng
+          Make your event memorable with Codeshare.ng
         </h1>
         <div
           style={{
