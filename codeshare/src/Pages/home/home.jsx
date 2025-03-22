@@ -365,14 +365,15 @@ const Home = () => {
           How it Works
         </h1>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(2, 1fr)", // 2 columns for smaller screens
-            gap: "20px",
-            padding: "20px",
-          }}
-        >
+      <div
+  style={{
+    display: "grid",
+    gridTemplateColumns: "1fr 1fr", // Ensures equal columns
+    gap: "20px",
+    padding: "20px",
+    alignItems: "stretch", // Ensures all boxes take up the full height
+  }}
+>
           <FeatureCards
             icon={
               <svg
