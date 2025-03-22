@@ -235,7 +235,7 @@ const Home = () => {
           style={{
             position: "absolute",
             top: 0,
-            width: "100%",
+            width: "100vw",
             borderRadius: "30px",
             height: "100%",
             backgroundColor: "rgba(17, 24, 39, 0.40)",
