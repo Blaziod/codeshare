@@ -205,6 +205,8 @@ const Home = () => {
           alignItems: "center",
           justifyContent: "space-between",
           padding: "10px",
+          paddingRight: "30px",
+          paddingLeft: "30px",
         }}
       >
         <img src="/assets/png/logo.png" width={50} height={50} alt="logo" />
@@ -235,7 +237,7 @@ const Home = () => {
           style={{
             position: "absolute",
             top: 0,
-            width: "90vw",
+            width: "100vw",
             borderRadius: "30px",
             height: "100%",
             backgroundColor: "rgba(17, 24, 39, 0.40)",
@@ -365,15 +367,15 @@ const Home = () => {
           How it Works
         </h1>
 
-      <div
-  style={{
-    display: "grid",
-    gridTemplateColumns: "1fr 1fr", // Ensures equal columns
-    gap: "20px",
-    padding: "20px",
-    alignItems: "stretch", // Ensures all boxes take up the full height
-  }}
->
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr", // Ensures equal columns
+            gap: "20px",
+            padding: "20px",
+            alignItems: "stretch", // Ensures all boxes take up the full height
+          }}
+        >
           <FeatureCards
             icon={
               <svg
