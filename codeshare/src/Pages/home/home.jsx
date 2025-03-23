@@ -198,7 +198,15 @@ const Home = () => {
   ];
 
   return (
-    <div style={{ minHeight: "100vh", minWidth: "100vw", maxWidth: "100vw" }}>
+    <div
+      style={{
+        minHeight: "100vh",
+        minWidth: "100vw",
+        width: "100vw", // or a fixed width like '500px'
+        maxWidth: "100%",
+        overflowX: "hidden",
+      }}
+    >
       <div
         style={{
           display: "flex",
