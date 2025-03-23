@@ -1,32 +1,74 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Footer from "components/footer/footer";
 
 const Home = () => {
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 768);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const FeatureCard = ({ icon, title, description }) => {
     return (
-      <div
-        style={{
-          backgroundColor: "#1F2937",
-          padding: "30px",
-          borderRadius: "10px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          gap: "20px",
-        }}
-      >
-        <div style={{ paddingBottom: "30px" }}>{icon}</div>
+      <div>
         <div
-          style={{ display: "flex", flexDirection: "column", margin: "0px" }}
+          style={{
+            backgroundColor: "#1F2937",
+            padding: "30px",
+            borderRadius: "10px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            flexDirection: "row",
+            gap: "10px",
+            alignSelf: "center",
+          }}
         >
-          <h1 style={{ fontSize: "14px", color: "#fff", fontWeight: "bolder" }}>
-            {title}
-          </h1>
-          <h1
-            style={{ fontSize: "14px", color: "#9CA3AF", fontWeight: "normal" }}
+          <div
+            style={{
+              paddingBottom: "30px",
+              justifyContent: "center",
+              alignItems: "center",
+              display: "flex",
+              margin: "0px",
+            }}
           >
-            {description}
-          </h1>
+            {icon}
+          </div>
+          <div
+            style={{
+              margin: "0px",
+              width: isSmallScreen ? "100%" : "30%",
+              justifyContent: "center",
+              alignItems: "center",
+              alignSelf: "center",
+            }}
+          >
+            <h1
+              style={{
+                fontSize: "14px",
+                color: "#fff",
+                fontWeight: "bolder",
+                width: isSmallScreen ? "100%" : "100%",
+              }}
+            >
+              {title}
+            </h1>
+            <h1
+              style={{
+                fontSize: "14px",
+                color: "#9CA3AF",
+                fontWeight: "normal",
+                width: isSmallScreen ? "100%" : "100%",
+              }}
+            >
+              {description}
+            </h1>
+          </div>
         </div>
       </div>
     );
